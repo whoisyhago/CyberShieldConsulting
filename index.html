@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberShield Web Consulting · Seguridad y desarrollo web sin compromisos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consultoría IT y desarrollo web para pymes y startups. Protegemos tu negocio digital y construimos las plataformas que impulsan tu crecimiento.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-meta">
+      <span>Madrid · Remote-first</span>
+      <span class="topbar-dot">·</span>
+      <span>Disponible 24/7</span>
+    </div>
+    <div class="topbar-links">
+      <a href="contacto.html">Contacto</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html" class="topbar-pill">¿Estás en riesgo?</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <strong>CYBERSHIELD</strong>
+        <span class="logo-sub">WEB CONSULTING</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Hablar por WhatsApp</a>
+
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" aria-label="Cerrar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <ul class="drawer-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="empresa.html">Empresa</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill drawer-cta">Hablar por WhatsApp</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-overlay"></div>
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow">— Presentamos</p>
+      <h1>
+        Seguridad y<br>
+        desarrollo web <span class="text-accent">sin<br>compromisos</span>
+      </h1>
+      <p class="hero-sub">
+        CyberShield Web Consulting protege tu negocio digital y construye las plataformas web que impulsan tu crecimiento. Consultoría IT de extremo a extremo.
+      </p>
+      <p class="hero-tagline">Deploy Securely.</p>
+      <div class="hero-actions">
+        <a href="servicios.html" class="btn btn-primary btn-pill btn-lg">
+          Conoce nuestros servicios
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <a href="contacto.html" class="btn btn-ghost btn-pill btn-lg">Contáctanos</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-shield">
+        <svg width="100%" height="100%" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+              <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.2"/>
+              <stop offset="100%" stop-color="#0891b2" stop-opacity="0.4"/>
+            </linearGradient>
+            <radialGradient id="glowGrad">
+              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="200" cy="230" r="180" fill="url(#glowGrad)"/>
+          <path d="M200 30 L350 90 L350 240 Q350 360 200 430 Q50 360 50 240 L50 90 Z"
+                fill="none" stroke="url(#shieldGrad)" stroke-width="2"/>
+          <path d="M200 50 L330 100 L330 235 Q330 345 200 410 Q70 345 70 235 L70 100 Z"
+                fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"/>
+          <path d="M200 70 L310 115 L310 230 Q310 330 200 390 Q90 330 90 230 L90 115 Z"
+                fill="none" stroke="#22d3ee" stroke-width="0.3" opacity="0.3"/>
+          <g fill="#22d3ee" opacity="0.6">
+            <circle cx="150" cy="180" r="2"/>
+            <circle cx="250" cy="180" r="2"/>
+            <circle cx="200" cy="140" r="2"/>
+            <circle cx="180" cy="240" r="2"/>
+            <circle cx="220" cy="240" r="2"/>
+            <circle cx="200" cy="300" r="2"/>
+          </g>
+          <g stroke="#22d3ee" stroke-width="0.4" opacity="0.4" fill="none">
+            <line x1="150" y1="180" x2="200" y2="140"/>
+            <line x1="200" y1="140" x2="250" y2="180"/>
+            <line x1="150" y1="180" x2="180" y2="240"/>
+            <line x1="250" y1="180" x2="220" y2="240"/>
+            <line x1="180" y1="240" x2="220" y2="240"/>
+            <line x1="200" y1="300" x2="180" y2="240"/>
+            <line x1="200" y1="300" x2="220" y2="240"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="container">
+    <p class="trust-label">Tecnologías y partners de confianza</p>
+    <div class="trust-grid">
+      <div class="trust-item">AWS</div>
+      <div class="trust-item">Microsoft 365</div>
+      <div class="trust-item">Google Workspace</div>
+      <div class="trust-item">Cloudflare</div>
+      <div class="trust-item">Shopify Partner</div>
+      <div class="trust-item">WordPress</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICIOS PREVIEW (3 destacados) -->
+<section class="services">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">— Qué hacemos</p>
+      <h2>Dos verticales, <span class="text-accent">una visión integral</span></h2>
+      <p class="section-sub">
+        Combinamos desarrollo web a medida con consultoría IT y ciberseguridad. Todo lo que tu negocio necesita para crecer en digital, sin agencias intermedias.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <div class="service-tag">Web</div>
+        <h3>Desarrollo web a medida</h3>
+        <p>Sitios corporativos, landings de conversión y tiendas online en Shopify, WordPress o stack moderno.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-tag">Seguridad</div>
+        <h3>Ciberseguridad gestionada</h3>
+        <p>Auditorías, hardening y monitorización continua. Respuesta rápida ante incidentes y plan de recuperación.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        </div>
+        <div class="service-tag">Cloud</div>
+        <h3>Consultoría cloud & DevOps</h3>
+        <p>Migración a la nube, automatización CI/CD y arquitectura escalable en AWS, Azure y Google Cloud.</p>
+      </article>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="servicios.html" class="btn btn-ghost btn-pill btn-lg">
+        Ver todos los servicios
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RIESGO + STATS -->
+<section class="risk">
+  <div class="container risk-inner">
+    <div class="risk-left">
+      <p class="eyebrow">— Diagnóstico gratuito</p>
+      <h2>¿Estás <span class="text-warning">en riesgo</span>?</h2>
+      <p class="risk-text">
+        El 60% de las pymes que sufren un ciberataque cierran en los 6 meses siguientes. Realizamos una <strong>auditoría inicial sin coste</strong> para detectar las vulnerabilidades de tu negocio antes de que sean explotadas.
+      </p>
+      <ul class="risk-list">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Análisis de superficie de ataque</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Revisión de tu web y sistemas</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Informe ejecutivo de hallazgos</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Plan de acción priorizado</li>
+      </ul>
+      <a href="contacto.html" class="btn btn-warning btn-pill btn-lg">
+        Solicitar auditoría gratuita
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="risk-right">
+      <div class="risk-stat">
+        <div class="risk-stat-num">60<span>%</span></div>
+        <div class="risk-stat-label">de las pymes atacadas<br>cierran en 6 meses</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">43<span>%</span></div>
+        <div class="risk-stat-label">de los ataques<br>dirigidos a pymes</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">200<span>k€</span></div>
+        <div class="risk-stat-label">coste medio<br>de un incidente</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">&lt;4h</div>
+        <div class="risk-stat-label">tiempo<br>de respuesta SLA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <p class="eyebrow">— Empieza hoy</p>
+    <h2>Tu negocio digital, <span class="text-accent">protegido y creciendo</span></h2>
+    <p>Cuéntanos qué necesitas. Te respondemos en menos de 24h hábiles con una propuesta clara y sin compromisos.</p>
+    <div class="cta-banner-actions">
+      <a href="contacto.html" class="btn btn-primary btn-pill btn-lg">Hablar con un experto</a>
+      <a href="empresa.html" class="btn btn-ghost btn-pill btn-lg">Conoce la empresa</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <span class="logo-text">
+          <strong>CYBERSHIELD</strong>
+          <span class="logo-sub">WEB CONSULTING</span>
+        </span>
+      </a>
+      <p>Consultoría IT y desarrollo web para pymes y startups que se toman en serio su seguridad y crecimiento digital.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="servicios.html">Desarrollo web</a></li>
+        <li><a href="servicios.html">Ciberseguridad</a></li>
+        <li><a href="servicios.html">Cloud & DevOps</a></li>
+        <li><a href="servicios.html">Soporte IT</a></li>
+        <li><a href="servicios.html">Compliance RGPD</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="empresa.html">Sobre nosotros</a></li>
+        <li><a href="empresa.html">Partners</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Auditoría gratis</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 CyberShield Web Consulting · Madrid, España</span>
+      <span class="footer-tagline">Deploy Securely.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

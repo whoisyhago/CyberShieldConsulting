@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto · CyberShield Web Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con CyberShield Web Consulting por WhatsApp. Respondemos en menos de 2 horas hábiles.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    .wa-hero { padding: 5rem 0 6rem; position: relative; overflow: hidden; }
+    .wa-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(37, 211, 102, 0.08) 0%, transparent 60%);
+    }
+
+    .wa-card {
+      position: relative;
+      max-width: 720px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 4rem 3rem;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .wa-card-icon {
+      width: 96px;
+      height: 96px;
+      margin: 0 auto 2rem;
+      border-radius: 24px;
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--whatsapp);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .wa-card-icon::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border: 2px solid var(--whatsapp);
+      border-radius: 28px;
+      opacity: 0;
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0; transform: scale(0.95); }
+      50% { opacity: 0.5; transform: scale(1.08); }
+    }
+
+    .wa-card h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1rem; }
+    .wa-card-sub {
+      color: var(--text-2);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+    }
+
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1.25rem 2.5rem;
+      background: var(--whatsapp);
+      color: #fff;
+      border-radius: 100px;
+      font-size: 1.05rem;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      transition: all 0.2s;
+    }
+
+    .wa-btn:hover {
+      background: #1ea951;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+    }
+
+    .wa-meta {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+
+    .wa-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-2);
+    }
+
+    .wa-meta-item svg { color: var(--whatsapp); flex-shrink: 0; }
+
+    .wa-alt {
+      padding: 5rem 0;
+      background: var(--bg-2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wa-alt-head {
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wa-alt-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+    .wa-alt-head p { color: var(--text-2); font-size: 0.98rem; margin-top: 0.5rem; }
+
+    .wa-alt-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .wa-alt-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    a.wa-alt-item:hover { border-color: var(--accent); transform: translateY(-2px); }
+
+    .wa-alt-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--accent-dim);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .wa-alt-text strong {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+
+    .wa-alt-text span { font-size: 0.92rem; color: var(--text); }
+
+    @media (max-width: 768px) {
+      .wa-card { padding: 2.5rem 1.75rem; border-radius: 16px; }
+      .wa-card-icon { width: 72px; height: 72px; }
+      .wa-card-icon svg { width: 36px; height: 36px; }
+      .wa-btn { padding: 1rem 2rem; font-size: 0.95rem; width: 100%; justify-content: center; }
+      .wa-meta { flex-direction: column; gap: 0.75rem; }
+      .wa-alt-grid { grid-template-columns: 1fr; }
+      .wa-alt { padding: 3.5rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-meta">
+      <span>Madrid · Remote-first</span>
+      <span class="topbar-dot">·</span>
+      <span>Disponible 24/7</span>
+    </div>
+    <div class="topbar-links">
+      <a href="contacto.html">Contacto</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html" class="topbar-pill">¿Estás en riesgo?</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      <span class="logo-text">
+        <strong>CYBERSHIELD</strong>
+        <span class="logo-sub">WEB CONSULTING</span>
+      </span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Hablar por WhatsApp</a>
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- DRAWER -->
+<div class="drawer" id="drawer">
+  <div class="drawer-overlay"></div>
+  <div class="drawer-panel">
+    <button class="drawer-close" aria-label="Cerrar">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <ul class="drawer-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="empresa.html">Empresa</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill drawer-cta">Hablar por WhatsApp</a>
+  </div>
+</div>
+
+<!-- WHATSAPP HERO -->
+<section class="wa-hero">
+  <div class="container">
+    <div class="wa-card">
+      <p class="eyebrow">— Contacto directo</p>
+
+      <div class="wa-card-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/>
+        </svg>
+      </div>
+
+      <h1>Hablemos por <span style="color: var(--whatsapp);">WhatsApp</span></h1>
+      <p class="wa-card-sub">
+        La forma más rápida de ponernos en contacto. Cuéntanos tu proyecto, resolvemos dudas o agendamos una llamada cuando mejor te venga.
+      </p>
+
+      <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info%20sobre%20vuestros%20servicios"
+         target="_blank" rel="noopener" class="wa-btn">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/>
+        </svg>
+        Abrir WhatsApp
+      </a>
+
+      <div class="wa-meta">
+        <div class="wa-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Respuesta normalmente en 1-2 horas
+        </div>
+        <div class="wa-meta-item">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
+          Sin compromiso · Sin venta agresiva
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATIVAS SECUNDARIAS -->
+<section class="wa-alt">
+  <div class="container">
+    <div class="wa-alt-head">
+      <p class="eyebrow">— ¿Prefieres otro canal?</p>
+      <h2>También puedes <span class="text-accent">escribirnos</span></h2>
+      <p>Si WhatsApp no es lo tuyo, también respondemos por estos canales (un poco más lento).</p>
+    </div>
+
+    <div class="wa-alt-grid">
+      <a href="mailto:hola@cybershield-consulting.com?subject=Consulta%20desde%20la%20web" class="wa-alt-item">
+        <div class="wa-alt-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
+        </div>
+        <div class="wa-alt-text">
+          <strong>Email</strong>
+          <span>hola@cybershield-consulting.com</span>
+        </div>
+      </a>
+
+      <a href="tel:+34900000000" class="wa-alt-item">
+        <div class="wa-alt-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="wa-alt-text">
+          <strong>Teléfono</strong>
+          <span>+34 900 000 000</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RIESGO -->
+<section class="risk">
+  <div class="container risk-inner">
+    <div class="risk-left">
+      <p class="eyebrow">— Diagnóstico gratuito</p>
+      <h2>¿Estás <span class="text-warning">en riesgo</span>?</h2>
+      <p class="risk-text">
+        Antes de hablar de servicios, podemos hacer una <strong>auditoría inicial sin coste</strong> de la salud digital de tu negocio. Sale más a cuenta detectar el problema antes que reparar el daño.
+      </p>
+      <ul class="risk-list">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Análisis de superficie de ataque</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Revisión de tu web y sistemas</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Informe ejecutivo de hallazgos</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Plan de acción priorizado</li>
+      </ul>
+      <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20la%20auditor%C3%ADa%20gratuita"
+         target="_blank" rel="noopener" class="btn btn-warning btn-pill btn-lg">
+        Solicitar por WhatsApp
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="risk-right">
+      <div class="risk-stat">
+        <div class="risk-stat-num">60<span>%</span></div>
+        <div class="risk-stat-label">de las pymes atacadas<br>cierran en 6 meses</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">43<span>%</span></div>
+        <div class="risk-stat-label">de los ataques<br>dirigidos a pymes</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">200<span>k€</span></div>
+        <div class="risk-stat-label">coste medio<br>de un incidente</div>
+      </div>
+      <div class="risk-stat">
+        <div class="risk-stat-num">&lt;4h</div>
+        <div class="risk-stat-label">tiempo<br>de respuesta SLA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </span>
+        <span class="logo-text">
+          <strong>CYBERSHIELD</strong>
+          <span class="logo-sub">WEB CONSULTING</span>
+        </span>
+      </a>
+      <p>Consultoría IT y desarrollo web para pymes y startups que se toman en serio su seguridad y crecimiento digital.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="servicios.html">Desarrollo web</a></li>
+        <li><a href="servicios.html">Ciberseguridad</a></li>
+        <li><a href="servicios.html">Cloud & DevOps</a></li>
+        <li><a href="servicios.html">Soporte IT</a></li>
+        <li><a href="servicios.html">Compliance RGPD</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="empresa.html">Sobre nosotros</a></li>
+        <li><a href="empresa.html">Partners</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Auditoría gratis</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 CyberShield Web Consulting · Madrid, España</span>
+      <span class="footer-tagline">Deploy Securely.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
