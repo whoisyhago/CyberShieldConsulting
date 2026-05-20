@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nuestro Equipo · WaveShield Web Consulting</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce al equipo de IT Engineers, Marketing Experts y SEO Managers que impulsa tu negocio digital.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+/* ─────────────────────────────────────────────
+   WAVESHIELD - EQUIPO
+   ───────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0e1a;
+  --bg-2: #0f1420;
+  --bg-3: #161c2c;
+  --bg-card: #131927;
+  --border: #1f2940;
+  --border-light: #2a3855;
+  --text: #e6ebf5;
+  --text-2: #a1adc4;
+  --text-3: #6c7793;
+  --accent: #22d3ee;
+  --accent-2: #06b6d4;
+  --accent-dim: rgba(34, 211, 238, 0.15);
+  --warning: #f97316;
+  --warning-2: #ea580c;
+  --warning-dim: rgba(249, 115, 22, 0.15);
+  --success: #22c55e;
+  --whatsapp: #25d366;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-weight: 400;
+  line-height: 1.65;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.78rem;
+  color: var(--text-3);
+  letter-spacing: 0.02em;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 36px;
+}
+
+.topbar-meta { display: flex; gap: 0.5rem; align-items: center; }
+.topbar-dot { opacity: 0.4; }
+.topbar-links { display: flex; gap: 1.5rem; align-items: center; }
+.topbar-links a { color: var(--text-2); transition: color 0.2s; }
+.topbar-links a:hover { color: var(--text); }
+
+.topbar-pill {
+  padding: 0.3rem 1rem;
+  border: 1px solid var(--warning);
+  border-radius: 100px;
+  color: var(--warning) !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+.topbar-pill:hover {
+  background: var(--warning);
+  color: #fff !important;
+}
+
+/* ── HEADER ── */
+.header {
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(10, 14, 26, 0.92);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background: var(--bg-2);
+}
+
+.logo-text { display: flex; flex-direction: column; line-height: 1; }
+.logo-text strong { font-size: 1rem; letter-spacing: 0.05em; color: var(--text); font-weight: 700; }
+.logo-sub { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--text-3); margin-top: 0.15rem; }
+
+.nav-desktop { display: flex; gap: 2.5rem; font-size: 0.95rem; }
+.nav-desktop a { color: var(--text-2); transition: color 0.2s; }
+.nav-desktop a:hover { color: var(--accent); }
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 4px 14px rgba(34, 211, 238, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--accent-2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+}
+
+.burger { display: none; background: none; border: none; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 60% 50%, rgba(34, 211, 238, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.hero h1 .text-accent { color: var(--accent); }
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-2);
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ── SECTIONS ── */
+.section-head {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+.section-head p {
+  color: var(--text-2);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.text-accent { color: var(--accent); }
+
+section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── TEAM GRID ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.team-card:hover {
+  border-color: var(--accent);
+  background: var(--bg-3);
+  transform: translateY(-4px);
+}
+
+.team-card:hover::before {
+  opacity: 1;
+}
+
+.team-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.team-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.team-role {
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.team-card p {
+  color: var(--text-2);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* ── VALUES SECTION ── */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.value-item {
+  background: var(--bg-2);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.value-item h3 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  color: var(--accent);
+}
+
+.value-item p {
+  color: var(--text-2);
+  font-size: 0.95rem;
+}
+
+/* ── CTA SECTION ── */
+.cta-section {
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.1) 0%, rgba(34, 211, 238, 0.05) 100%);
+  border: 1px solid var(--accent-dim);
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: var(--text-2);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: 3rem 0;
+  font-size: 0.9rem;
+  color: var(--text-3);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-col h4 {
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-2);
+  transition: color 0.2s;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .section-head h2 { font-size: 1.8rem; }
+  .nav-desktop { display: none; }
+  .burger { display: block; }
+  .topbar-links { display: none; }
+  .team-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+}
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-meta">
+      <span>Madrid · Remote-first</span>
+      <span class="topbar-dot">·</span>
+      <span>Disponible 24/7</span>
+    </div>
+    <div class="topbar-links">
+      <a href="#contacto">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="#contacto" class="topbar-pill">Únete al equipo</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">
+        <img src="images/logo.png" alt="WaveShield Logo" width="28" height="28">
+      </span>
+      <span class="logo-text">
+        <strong>WAVESHIELD</strong>
+        <span class="logo-sub">WEB CONSULTING</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="index.html">Inicio</a>
+      <a href="#">Equipo</a>
+      <a href="#">Servicios</a>
+      <a href="#">Contacto</a>
+    </nav>
+
+    <a href="#" class="btn btn-primary">Hablar por WhatsApp</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <p class="eyebrow">— Nuestro equipo</p>
+    <h1>Jóvenes IT Engineers, <span class="text-accent">Marketing Experts</span> y SEO Managers</h1>
+    <p>Un equipo multidisciplinario nacido en la era digital, comprometido con potenciar negocios digitales y pequeñas empresas. Somos especialistas en transformación digital desde la consultoría hasta la ejecución.</p>
+  </div>
+</section>
+
+<!-- QUIÉNES SOMOS -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">— Quiénes somos</p>
+      <h2>Una generación diferente de <span class="text-accent">consultores tech</span></h2>
+      <p>No somos los consultores de la vieja escuela. Somos un equipo joven, ágil y orientado a resultados que entiende los retos de hoy y las oportunidades del mañana.</p>
+    </div>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-icon">👨‍💻</div>
+        <h3>IT Engineers</h3>
+        <p class="team-role">Full Stack & DevOps</p>
+        <p>Expertos en desarrollo web moderno, infraestructura en la nube y soluciones escalables. Construimos plataformas robustas que soportan el crecimiento de tu negocio.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-icon">📊</div>
+        <h3>Marketing Experts</h3>
+        <p class="team-role">Growth & Strategy</p>
+        <p>Estrategas digitales que transforman visitas en clientes. Combinamos data, creatividad y psicología del consumidor para impulsar el crecimiento de tu marca.</p>
+      </div>
+
+      <div class="team-card">
+        <div class="team-icon">🔍</div>
+        <h3>SEO Managers</h3>
+        <p class="team-role">Search & Content</p>
+        <p>Especialistas en posicionamiento orgánico que hacen visible tu negocio en buscadores. Estrategia integral de contenido para dominar tu nicho.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUESTROS VALORES -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">— Fundamentos</p>
+      <h2>Los principios que nos <span class="text-accent">definen</span></h2>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🚀</div>
+        <h3>Innovación</h3>
+        <p>Estamos obsesionados con la tecnología y las tendencias emergentes. Llevamos la vanguardia a tu negocio.</p>
+      </div>
+
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎯</div>
+        <h3>Resultados</h3>
+        <p>No hablamos en promesas, entregamos en KPIs. Cada acción está diseñada para impactar tu bottom line.</p>
+      </div>
+
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+        <h3>Partnership</h3>
+        <p>No somos proveedores, somos socios. Tu éxito es nuestro éxito, y nos comprometemos 100% con tu visión.</p>
+      </div>
+
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">⚡</div>
+        <h3>Agilidad</h3>
+        <p>La velocidad es ventaja competitiva. Nos adaptamos rápido a cambios y aprovechamos oportunidades al vuelo.</p>
+      </div>
+
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔐</div>
+        <h3>Seguridad</h3>
+        <p>Protegemos tu negocio como si fuera el nuestro. Ciberseguridad sin compromisos desde el día uno.</p>
+      </div>
+
+      <div class="value-item">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">💡</div>
+        <h3>Transparencia</h3>
+        <p>Comunicación clara, reportes honestos. Sabes exactamente qué hacemos, cómo lo hacemos y por qué.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISIÓN -->
+<section>
+  <div class="container">
+    <div class="section-head" style="max-width: 1000px;">
+      <p class="eyebrow">— Por qué existimos</p>
+      <h2>Nuestra misión</h2>
+      <p style="font-size: 1.15rem; color: var(--text);">Potenciar negocios digitales y pequeñas empresas eliminando la brecha entre aspiración y ejecución. Creemos que la tecnología, cuando se usa bien, es el gran igualador. No importa si eres un startup de 5 personas o una pyme con 50. Mereces acceso a consultoría de clase mundial, infraestructura moderna y estrategia alineada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">— Track record</p>
+      <h2>Casos de éxito</h2>
+      <p>Hemos ayudado a startups a escalar a 100K+ usuarios mensuales, transformado operaciones de pymes con automation, y protegido infraestructuras de ataques coordinados.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      <div style="background: var(--bg-2); border: 1px solid var(--border-light); border-radius: 12px; padding: 2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">500+</div>
+        <p style="color: var(--text-2);">Empresas transformadas</p>
+      </div>
+
+      <div style="background: var(--bg-2); border: 1px solid var(--border-light); border-radius: 12px; padding: 2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">15M+</div>
+        <p style="color: var(--text-2);">Visitantes anuales generados</p>
+      </div>
+
+      <div style="background: var(--bg-2); border: 1px solid var(--border-light); border-radius: 12px; padding: 2rem; text-align: center;">
+        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent); margin-bottom: 0.5rem;">99.9%</div>
+        <p style="color: var(--text-2);">Uptime garantizado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section>
+  <div class="container">
+    <div class="cta-section">
+      <h2>¿Listo para transformar tu negocio?</h2>
+      <p>Habla con nuestro equipo sin compromiso. Evaluamos tu situación actual y te presentamos una hoja de ruta clara.</p>
+      <a href="#" class="btn btn-primary" style="padding: 1rem 2.5rem; font-size: 1rem;">Agendar consultoría gratuita</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Productos</h4>
+        <a href="#">Desarrollo Web</a>
+        <a href="#">Ciberseguridad</a>
+        <a href="#">Consultoría IT</a>
+        <a href="#">SEO & Marketing</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Equipo</a>
+        <a href="#">Blog</a>
+        <a href="#">Contacto</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+        <a href="#">Compliance</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Conecta</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+        <a href="#">GitHub</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 WaveShield Web Consulting. Todos los derechos reservados.</p>
+      <p>Madrid · España | Disponible remotamente en toda Europa</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
