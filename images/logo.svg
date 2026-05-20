@@ -1,15 +1,23 @@
-<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shield outline -->
-  <path d="M100 20 L160 50 L160 130 C160 180 100 220 100 220 C100 220 40 180 40 130 L40 50 Z" 
-        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline with depth -->
+  <defs>
+    <linearGradient id="shieldGradSmall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D4FF"/>
+      <stop offset="100%" stop-color="#0891B2"/>
+    </linearGradient>
+  </defs>
   
-  <!-- Wave lines inside shield -->
-  <path d="M80 100 Q100 90 120 100" 
-        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M75 125 Q100 110 125 125" 
-        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M70 150 Q100 130 130 150" 
-        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
-  <path d="M65 175 Q100 150 135 175" 
-        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
+  <!-- Main shield -->
+  <path d="M120 20 L200 60 L200 140 C200 200 120 230 120 230 C120 230 40 200 40 140 L40 60 Z" 
+        fill="none" stroke="url(#shieldGradSmall)" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Wave lines - realistic flow -->
+  <path d="M95 110 Q115 100 135 115" 
+        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M90 140 Q115 125 140 145" 
+        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M85 170 Q115 150 145 175" 
+        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M80 200 Q115 175 150 205" 
+        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
 </svg>

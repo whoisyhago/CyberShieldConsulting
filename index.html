@@ -99,38 +99,44 @@
         <svg width="100%" height="100%" viewBox="0 0 400 460" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
-              <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.2"/>
-              <stop offset="100%" stop-color="#0891b2" stop-opacity="0.4"/>
+              <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+              <stop offset="50%" stop-color="#00D4FF" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#0891B2" stop-opacity="0.7"/>
             </linearGradient>
             <radialGradient id="glowGrad">
-              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3"/>
-              <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+              <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#00D4FF" stop-opacity="0"/>
             </radialGradient>
           </defs>
+          <!-- Glow effect -->
           <circle cx="200" cy="230" r="180" fill="url(#glowGrad)"/>
+          
+          <!-- Main shield outline -->
           <path d="M200 30 L350 90 L350 240 Q350 360 200 430 Q50 360 50 240 L50 90 Z"
-                fill="none" stroke="url(#shieldGrad)" stroke-width="2"/>
+                fill="none" stroke="url(#shieldGrad)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+          
+          <!-- Inner shield lines for depth -->
           <path d="M200 50 L330 100 L330 235 Q330 345 200 410 Q70 345 70 235 L70 100 Z"
-                fill="none" stroke="#22d3ee" stroke-width="0.5" opacity="0.5"/>
+                fill="none" stroke="#00D4FF" stroke-width="1" opacity="0.4"/>
           <path d="M200 70 L310 115 L310 230 Q310 330 200 390 Q90 330 90 230 L90 115 Z"
-                fill="none" stroke="#22d3ee" stroke-width="0.3" opacity="0.3"/>
-          <g fill="#22d3ee" opacity="0.6">
-            <circle cx="150" cy="180" r="2"/>
-            <circle cx="250" cy="180" r="2"/>
-            <circle cx="200" cy="140" r="2"/>
-            <circle cx="180" cy="240" r="2"/>
-            <circle cx="220" cy="240" r="2"/>
-            <circle cx="200" cy="300" r="2"/>
+                fill="none" stroke="#00D4FF" stroke-width="0.5" opacity="0.2"/>
+          
+          <!-- Wave lines inside shield - matching the original design -->
+          <g stroke="#00D4FF" stroke-width="18" stroke-linecap="round" fill="none" opacity="0.9">
+            <path d="M140 140 Q180 120 240 160"/>
+            <path d="M130 190 Q180 160 250 210"/>
+            <path d="M120 240 Q180 200 260 260"/>
+            <path d="M110 290 Q180 240 270 310"/>
           </g>
-          <g stroke="#22d3ee" stroke-width="0.4" opacity="0.4" fill="none">
-            <line x1="150" y1="180" x2="200" y2="140"/>
-            <line x1="200" y1="140" x2="250" y2="180"/>
-            <line x1="150" y1="180" x2="180" y2="240"/>
-            <line x1="250" y1="180" x2="220" y2="240"/>
-            <line x1="180" y1="240" x2="220" y2="240"/>
-            <line x1="200" y1="300" x2="180" y2="240"/>
-            <line x1="200" y1="300" x2="220" y2="240"/>
+          
+          <!-- Connection nodes for tech feel -->
+          <g fill="#00D4FF" opacity="0.7">
+            <circle cx="150" cy="180" r="3"/>
+            <circle cx="210" cy="160" r="3"/>
+            <circle cx="260" cy="210" r="3"/>
+            <circle cx="200" cy="250" r="3"/>
+            <circle cx="140" cy="280" r="3"/>
+            <circle cx="280" cy="290" r="3"/>
           </g>
         </svg>
       </div>
