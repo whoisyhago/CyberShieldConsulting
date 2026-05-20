@@ -14,40 +14,80 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse at center, rgba(37, 211, 102, 0.08) 0%, transparent 60%);
+      background: radial-gradient(ellipse at 30% 50%, rgba(34, 211, 238, 0.06) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(37, 211, 102, 0.06) 0%, transparent 60%);
     }
 
-    .wa-card {
+    .wa-hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); margin-bottom: 1rem; }
+
+    .wa-card-sub {
+      color: var(--text-2);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* DUO de cards Email + WhatsApp */
+    .contact-duo {
       position: relative;
-      max-width: 720px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      max-width: 960px;
       margin: 0 auto;
+    }
+
+    .contact-duo-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 4rem 3rem;
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
       text-align: center;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .wa-card-icon {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 2rem;
-      border-radius: 24px;
-      background: rgba(37, 211, 102, 0.15);
-      color: var(--whatsapp);
+    .contact-duo-card:nth-child(1):hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 50px rgba(34, 211, 238, 0.2);
+    }
+
+    .contact-duo-card:nth-child(2):hover {
+      border-color: var(--whatsapp);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 50px rgba(37, 211, 102, 0.2);
+    }
+
+    .contact-duo-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .contact-duo-icon-email {
+      background: var(--accent-dim);
+      color: var(--accent);
+    }
+
+    .contact-duo-icon-wa {
+      background: rgba(37, 211, 102, 0.15);
+      color: var(--whatsapp);
       position: relative;
     }
 
-    .wa-card-icon::after {
+    .contact-duo-icon-wa::after {
       content: '';
       position: absolute;
-      inset: -4px;
+      inset: -3px;
       border: 2px solid var(--whatsapp);
-      border-radius: 28px;
+      border-radius: 22px;
       opacity: 0;
       animation: pulse 2.4s ease-in-out infinite;
     }
@@ -57,128 +97,87 @@
       50% { opacity: 0.5; transform: scale(1.08); }
     }
 
-    .wa-card h1 { font-size: clamp(2rem, 4.5vw, 3rem); margin-bottom: 1rem; }
-    .wa-card-sub {
-      color: var(--text-2);
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+    .contact-duo-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
     }
 
-    .wa-btn {
+    .contact-duo-card p {
+      color: var(--text-2);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.75rem;
+      flex: 1;
+    }
+
+    .contact-duo-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.75rem;
-      padding: 1.25rem 2.5rem;
+      gap: 0.5rem;
+      padding: 1rem 1.75rem;
+      border-radius: 100px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: all 0.2s;
+      margin-bottom: 1.25rem;
+      white-space: nowrap;
+      max-width: 100%;
+    }
+
+    .contact-duo-btn-email {
+      background: var(--accent);
+      color: var(--bg);
+      box-shadow: 0 4px 16px rgba(34, 211, 238, 0.25);
+    }
+
+    .contact-duo-btn-email:hover {
+      background: var(--accent-2);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 211, 238, 0.4);
+    }
+
+    .contact-duo-btn-wa {
       background: var(--whatsapp);
       color: #fff;
-      border-radius: 100px;
-      font-size: 1.05rem;
-      font-weight: 600;
-      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
-      transition: all 0.2s;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
     }
 
-    .wa-btn:hover {
+    .contact-duo-btn-wa:hover {
       background: #1ea951;
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
     }
 
-    .wa-meta {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-top: 2rem;
-      padding-top: 2rem;
+    .contact-duo-meta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.82rem;
+      color: var(--text-3);
+      padding-top: 1rem;
       border-top: 1px solid var(--border);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .contact-duo-meta svg { flex-shrink: 0; opacity: 0.7; }
+
+    /* Acciones del riesgo (doble botón) */
+    .risk-actions {
+      display: flex;
+      gap: 1rem;
       flex-wrap: wrap;
     }
 
-    .wa-meta-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.88rem;
-      color: var(--text-2);
-    }
-
-    .wa-meta-item svg { color: var(--whatsapp); flex-shrink: 0; }
-
-    .wa-alt {
-      padding: 5rem 0;
-      background: var(--bg-2);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .wa-alt-head {
-      text-align: center;
-      margin-bottom: 3rem;
-      max-width: 540px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .wa-alt-head h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
-    .wa-alt-head p { color: var(--text-2); font-size: 0.98rem; margin-top: 0.5rem; }
-
-    .wa-alt-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .wa-alt-item {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      transition: border-color 0.25s, transform 0.25s;
-    }
-
-    a.wa-alt-item:hover { border-color: var(--accent); transform: translateY(-2px); }
-
-    .wa-alt-icon {
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
-      background: var(--accent-dim);
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .wa-alt-text strong {
-      display: block;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--text-3);
-      font-weight: 600;
-      margin-bottom: 0.2rem;
-    }
-
-    .wa-alt-text span { font-size: 0.92rem; color: var(--text); }
-
     @media (max-width: 768px) {
-      .wa-card { padding: 2.5rem 1.75rem; border-radius: 16px; }
-      .wa-card-icon { width: 72px; height: 72px; }
-      .wa-card-icon svg { width: 36px; height: 36px; }
-      .wa-btn { padding: 1rem 2rem; font-size: 0.95rem; width: 100%; justify-content: center; }
-      .wa-meta { flex-direction: column; gap: 0.75rem; }
-      .wa-alt-grid { grid-template-columns: 1fr; }
-      .wa-alt { padding: 3.5rem 0; }
+      .contact-duo { grid-template-columns: 1fr; gap: 1rem; }
+      .contact-duo-card { padding: 2.25rem 1.5rem; border-radius: 16px; }
+      .contact-duo-icon { width: 64px; height: 64px; }
+      .contact-duo-icon svg { width: 32px; height: 32px; }
+      .contact-duo-btn { width: 100%; justify-content: center; padding: 0.95rem 1.5rem; font-size: 0.88rem; }
+      .risk-actions { flex-direction: column; }
+      .risk-actions .btn { width: 100%; justify-content: center; }
     }
   </style>
 </head>
@@ -218,7 +217,7 @@
       <a href="empresa.html">Empresa</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Hablar por WhatsApp</a>
+    <a href="https://wa.me/34695984273?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Hablar por WhatsApp</a>
     <button class="burger" id="burger" aria-label="Menú">
       <span></span><span></span><span></span>
     </button>
@@ -238,78 +237,66 @@
       <li><a href="empresa.html">Empresa</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
-    <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill drawer-cta">Hablar por WhatsApp</a>
+    <a href="https://wa.me/34695984273?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill drawer-cta">Hablar por WhatsApp</a>
   </div>
 </div>
 
-<!-- WHATSAPP HERO -->
+<!-- CONTACT HERO con dos cards: Email + WhatsApp -->
 <section class="wa-hero">
   <div class="container">
-    <div class="wa-card">
-      <p class="eyebrow">— Contacto directo</p>
 
-      <div class="wa-card-icon">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/>
-        </svg>
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 3.5rem;">
+      <p class="eyebrow">— Contacto directo</p>
+      <h1>Hablemos de tu <span class="text-accent">proyecto</span></h1>
+      <p class="wa-card-sub" style="max-width: 580px; margin: 1rem auto 0;">
+        Elige el canal que prefieras. Respondemos en menos de 24 horas, sin compromiso y sin venta agresiva.
+      </p>
+    </div>
+
+    <div class="contact-duo">
+
+      <!-- EMAIL CARD -->
+      <div class="contact-duo-card">
+        <div class="contact-duo-icon contact-duo-icon-email">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+            <path d="M22 6 12 13 2 6"/>
+          </svg>
+        </div>
+        <h2>Escríbenos un <span class="text-accent">email</span></h2>
+        <p>Para consultas detalladas, presupuestos o documentación. Te respondemos personalmente en menos de 24 horas hábiles.</p>
+        <a href="mailto:hola@waveshield-consulting.com?subject=Consulta%20desde%20la%20web&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20m%C3%A1s%20info%20sobre%20vuestros%20servicios.%0A%0AEmpresa%3A%0ANecesidad%3A%0A%0AGracias."
+           class="contact-duo-btn contact-duo-btn-email">
+          hola@waveshield-consulting.com
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <div class="contact-duo-meta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Respuesta en menos de 24h hábiles
+        </div>
       </div>
 
-      <h1>Hablemos por <span style="color: var(--whatsapp);">WhatsApp</span></h1>
-      <p class="wa-card-sub">
-        La forma más rápida de ponernos en contacto. Cuéntanos tu proyecto, resolvemos dudas o agendamos una llamada cuando mejor te venga.
-      </p>
-
-      <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info%20sobre%20vuestros%20servicios"
-         target="_blank" rel="noopener" class="wa-btn">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/>
-        </svg>
-        Abrir WhatsApp
-      </a>
-
-      <div class="wa-meta">
-        <div class="wa-meta-item">
+      <!-- WHATSAPP CARD -->
+      <div class="contact-duo-card">
+        <div class="contact-duo-icon contact-duo-icon-wa">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/>
+          </svg>
+        </div>
+        <h2>Hablemos por <span style="color: var(--whatsapp);">WhatsApp</span></h2>
+        <p>Para algo rápido o urgente. Ideal si ya has tenido un incidente o necesitas consejo en el momento.</p>
+        <a href="https://wa.me/34695984273?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info%20sobre%20vuestros%20servicios"
+           target="_blank" rel="noopener"
+           class="contact-duo-btn contact-duo-btn-wa">
+          Abrir WhatsApp
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <div class="contact-duo-meta">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           Respuesta normalmente en 1-2 horas
         </div>
-        <div class="wa-meta-item">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg>
-          Sin compromiso · Sin venta agresiva
-        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- ALTERNATIVAS SECUNDARIAS -->
-<section class="wa-alt">
-  <div class="container">
-    <div class="wa-alt-head">
-      <p class="eyebrow">— ¿Prefieres otro canal?</p>
-      <h2>También puedes <span class="text-accent">escribirnos</span></h2>
-      <p>Si WhatsApp no es lo tuyo, también respondemos por estos canales (un poco más lento).</p>
-    </div>
-
-    <div class="wa-alt-grid">
-      <a href="mailto:hola@waveshield-consulting.com?subject=Consulta%20desde%20la%20web" class="wa-alt-item">
-        <div class="wa-alt-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
-        </div>
-        <div class="wa-alt-text">
-          <strong>Email</strong>
-          <span>hola@waveshield-consulting.com</span>
-        </div>
-      </a>
-
-      <a href="tel:+34900000000" class="wa-alt-item">
-        <div class="wa-alt-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        </div>
-        <div class="wa-alt-text">
-          <strong>Teléfono</strong>
-          <span>+34 900 000 000</span>
-        </div>
-      </a>
     </div>
   </div>
 </section>
@@ -329,11 +316,18 @@
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Informe ejecutivo de hallazgos</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5L20 7"/></svg> Plan de acción priorizado</li>
       </ul>
-      <a href="https://wa.me/34600000000?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20la%20auditor%C3%ADa%20gratuita"
-         target="_blank" rel="noopener" class="btn btn-warning btn-pill btn-lg">
-        Solicitar por WhatsApp
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
-      </a>
+      <div class="risk-actions">
+        <a href="https://wa.me/34695984273?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20la%20auditor%C3%ADa%20gratuita"
+           target="_blank" rel="noopener" class="btn btn-warning btn-pill btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.3-.1-.5-.1-.7.1s-.8.9-1 1.1c-.2.2-.4.2-.6.1-.8-.4-1.5-.9-2.2-1.4-.6-.5-1.1-1.2-1.6-1.9-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.2-.8.4-.8.8-1.2 1.8-1.2 2.9.1 1.3.6 2.5 1.4 3.5 1.4 2 3.3 3.6 5.4 4.6.6.3 1.1.5 1.7.6.6.2 1.2.2 1.9.1.8-.1 1.5-.6 2-1.3.3-.4.4-.9.4-1.4-.1-.2-.3-.3-.6-.4M19.9 4.1c-4.4-4.4-11.5-4.4-15.9 0-3.6 3.6-4.3 9.2-1.7 13.5L0 24l6.6-1.7c1.6.9 3.4 1.3 5.2 1.3 6.2 0 11.2-5 11.2-11.2.1-3-1.1-5.9-3.2-8.1 0 0 .1 0 .1-.2m-7.2 17.4c-1.6 0-3.2-.4-4.6-1.3l-.3-.2-3.9 1 1-3.8-.2-.3c-2.9-4.5-1.5-10.5 3-13.3s10.4-1.5 13.3 3 1.5 10.4-3 13.3c-1.5 1-3.4 1.6-5.3 1.6"/></svg>
+          Solicitar por WhatsApp
+        </a>
+        <a href="mailto:hola@waveshield-consulting.com?subject=Solicitud%20de%20auditor%C3%ADa%20gratuita&body=Hola%2C%0A%0AMe%20gustar%C3%ADa%20solicitar%20la%20auditor%C3%ADa%20gratuita%20de%20WaveShield.%0A%0AEmpresa%3A%0AWeb%3A%0ASector%3A%0A%0AGracias."
+           class="btn btn-ghost btn-pill btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6 12 13 2 6"/></svg>
+          Solicitar por email
+        </a>
+      </div>
     </div>
     <div class="risk-right">
       <div class="risk-stat">
