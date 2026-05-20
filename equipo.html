@@ -427,7 +427,7 @@ section {
 </div>
 
 <!-- HEADER -->
-<header class="header">
+<header class="header" id="header">
   <div class="container header-inner">
     <a href="index.html" class="logo">
       <span class="logo-icon">
@@ -441,12 +441,17 @@ section {
 
     <nav class="nav-desktop">
       <a href="index.html">Inicio</a>
-      <a href="#">Equipo</a>
-      <a href="#">Servicios</a>
-      <a href="#">Contacto</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="empresa.html">Empresa</a>
+      <a href="equipo.html">Equipo</a>
+      <a href="contacto.html">Contacto</a>
     </nav>
 
-    <a href="#" class="btn btn-primary">Hablar por WhatsApp</a>
+    <a href="https://wa.me/34695984273?text=Hola%2C%20me%20gustar%C3%ADa%20m%C3%A1s%20info" target="_blank" rel="noopener" class="btn btn-primary btn-pill">Hablar por WhatsApp</a>
+
+    <button class="burger" id="burger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -594,19 +599,55 @@ section {
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-content" style="text-align: center; margin-bottom: 2rem;">
-      <nav style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
-        <a href="index.html" style="color: var(--text-2); transition: color 0.2s; font-weight: 500;">Inicio</a>
-        <a href="servicios.html" style="color: var(--text-2); transition: color 0.2s; font-weight: 500;">Servicios</a>
-        <a href="empresa.html" style="color: var(--text-2); transition: color 0.2s; font-weight: 500;">Empresa</a>
-        <a href="contacto.html" style="color: var(--text-2); transition: color 0.2s; font-weight: 500;">Contacto</a>
-      </nav>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">
+          <img src="images/logo.png" alt="WaveShield Logo" width="28" height="28">
+        </span>
+        <span class="logo-text">
+          <strong>WAVESHIELD</strong>
+          <span class="logo-sub">WEB CONSULTING</span>
+        </span>
+      </a>
+      <p>Consultoría IT y desarrollo web para pymes y startups que se toman en serio su seguridad y crecimiento digital.</p>
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2024 WaveShield Web Consulting. Todos los derechos reservados.</p>
-      <p>Madrid · España | Disponible remotamente en toda Europa</p>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="servicios.html">Desarrollo web</a></li>
+        <li><a href="servicios.html">Ciberseguridad</a></li>
+        <li><a href="servicios.html">Cloud & DevOps</a></li>
+        <li><a href="servicios.html">Soporte IT</a></li>
+        <li><a href="servicios.html">Compliance RGPD</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="empresa.html">Sobre nosotros</a></li>
+        <li><a href="empresa.html">Partners</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="contacto.html">Auditoría gratis</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Aviso legal</a></li>
+        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <span>© 2026 WaveShield Web Consulting · Madrid, España</span>
+      <span class="footer-tagline">Deploy Securely.</span>
     </div>
   </div>
 </footer>
