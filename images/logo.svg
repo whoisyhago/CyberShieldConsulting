@@ -1,0 +1,15 @@
+<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+  <!-- Shield outline -->
+  <path d="M100 20 L160 50 L160 130 C160 180 100 220 100 220 C100 220 40 180 40 130 L40 50 Z" 
+        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+  
+  <!-- Wave lines inside shield -->
+  <path d="M80 100 Q100 90 120 100" 
+        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M75 125 Q100 110 125 125" 
+        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M70 150 Q100 130 130 150" 
+        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
+  <path d="M65 175 Q100 150 135 175" 
+        fill="none" stroke="#00D4FF" stroke-width="10" stroke-linecap="round"/>
+</svg>
