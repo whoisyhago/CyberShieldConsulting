@@ -1,23 +1,33 @@
-<svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg">
-  <!-- Shield outline with depth -->
+<svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="shieldGradSmall" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00D4FF"/>
-      <stop offset="100%" stop-color="#0891B2"/>
-    </linearGradient>
+    <style>
+      .shield-outline { stroke: #00D4FF; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .shield-fill { stroke: #00D4FF; fill: none; }
+      .wave { stroke: #00D4FF; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
   </defs>
   
-  <!-- Main shield -->
-  <path d="M120 20 L200 60 L200 140 C200 200 120 230 120 230 C120 230 40 200 40 140 L40 60 Z" 
-        fill="none" stroke="url(#shieldGradSmall)" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <!-- Shield outline - main border -->
+  <path class="shield-outline" stroke-width="22" d="M150 25 L260 90 L260 200 C260 290 150 350 150 350 C150 350 40 290 40 200 L40 90 Z"/>
   
-  <!-- Wave lines - realistic flow -->
-  <path d="M95 110 Q115 100 135 115" 
-        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M90 140 Q115 125 140 145" 
-        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M85 170 Q115 150 145 175" 
-        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
-  <path d="M80 200 Q115 175 150 205" 
-        fill="none" stroke="#00D4FF" stroke-width="12" stroke-linecap="round"/>
+  <!-- Shield inner detail line -->
+  <path class="shield-fill" stroke-width="4" opacity="0.6" d="M150 45 L245 105 L245 195 C245 275 150 330 150 330 C150 330 55 275 55 195 L55 105 Z"/>
+  
+  <!-- Wave lines - flowing from right to left with curves -->
+  <g class="wave" stroke-width="18" opacity="0.95">
+    <!-- Top wave -->
+    <path d="M110 140 Q150 125 240 175"/>
+    
+    <!-- Upper middle wave -->
+    <path d="M100 190 Q150 165 250 230"/>
+    
+    <!-- Lower middle wave -->
+    <path d="M90 240 Q150 205 260 285"/>
+    
+    <!-- Bottom wave -->
+    <path d="M80 290 Q150 245 270 340"/>
+  </g>
+  
+  <!-- Shadow/depth on left side of shield -->
+  <path class="shield-fill" stroke-width="2" opacity="0.3" d="M50 100 L50 190 C50 270 120 320 150 350"/>
 </svg>
