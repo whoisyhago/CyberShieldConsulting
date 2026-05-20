@@ -1,6 +1,6 @@
-# CyberShield Web Consulting
+# Waveshield Web Consulting
 
-Sitio web corporativo de **CyberShield Web Consulting** — servicios de desarrollo web y consultoría IT para pymes y startups.
+Sitio web corporativo de **WaveShield Web Consulting** — servicios de desarrollo web y consultoría IT para pymes y startups.
 
 🌐 Stack: HTML + CSS + JavaScript vainilla · Sin frameworks, sin build, sin dependencias.
 
@@ -9,7 +9,7 @@ Sitio web corporativo de **CyberShield Web Consulting** — servicios de desarro
 ## Estructura
 
 ```
-cybershield/
+Waveshield/
 ├── index.html              # Inicio (home con hero)
 ├── servicios.html          # Catálogo de 6 servicios + proceso
 ├── empresa.html            # Sobre nosotros, timeline, partners
@@ -61,9 +61,9 @@ cybershield/
 
 ### Opción A — GitHub Pages (gratis)
 
-1. Sube los archivos al repo `CyberShieldConsulting`
+1. Sube los archivos al repo `WaveShieldConsulting`
 2. Settings → Pages → Source: `main` branch, root folder
-3. URL pública: `whoisyhago.github.io/CyberShieldConsulting`
+3. URL pública: `whoisyhago.github.io/WaveShieldConsulting`
 
 ### Opción B — Vercel / Netlify (más profesional)
 
@@ -79,9 +79,9 @@ Antes de publicar, reemplaza estos **placeholders**:
 
 | Placeholder | Dónde está | Reemplazar por |
 |---|---|---|
-| `hola@cybershield-consulting.com` | `contacto.html`, footer, mailto links | Tu email real |
+| `hola@Waveshield-consulting.com` | `contacto.html`, footer, mailto links | Tu email real |
 | `+34 900 000 000` | `contacto.html` (sección emergencias) | Tu teléfono real |
-| `https://calendly.com/cybershield-consulting` | `contacto.html` botón Calendly | Tu URL de Calendly |
+| `https://calendly.com/Waveshield-consulting` | `contacto.html` botón Calendly | Tu URL de Calendly |
 | `https://wa.me/34600000000` | `contacto.html` botón WhatsApp | Tu número WhatsApp (sin +) |
 
 **Truco para WhatsApp:** el formato `wa.me/[código país sin +][número]` siempre funciona. Ejemplo:
@@ -121,7 +121,7 @@ Cambia esos valores y se actualiza todo el sitio.
 
 Cuando quieras crecer la web:
 
-- **Comprar dominio** propio (cybershield-consulting.com o similar)
+- **Comprar dominio** propio (Waveshield-consulting.com o similar)
 - **Configurar email profesional** (`hola@tudominio.com` con Google Workspace o Zoho)
 - **Crear Calendly real** y reemplazar el placeholder
 - **Página de casos de éxito** con clientes reales
@@ -144,4 +144,4 @@ Para sustituir el código de Lovable que tenías en el repo:
 
 ---
 
-© 2026 CyberShield Web Consulting · Madrid, España
+© 2026 WaveShield Web Consulting · Madrid, España
